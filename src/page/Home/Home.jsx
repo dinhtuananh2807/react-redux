@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { quanlyPhimServ } from '../../services/quanLyPhim'
 import BannerCarousel from '../../component/Carousel/Carousel';
+import ListMovie from '../../component/ListMovie/ListMovie';
+import { useDispatch } from 'react-redux';
+import { getAllMovieAPI } from '../../redux/phimSlice';
 
 const Home = () => {
+
+  const dispatch = useDispatch();
 
   const [listBanner,setListBanner] = useState([]);
 
@@ -16,6 +21,8 @@ const Home = () => {
         }).catch((error)=>{
             console.log(error);
         });
+
+        dispatch(getAllMovieAPI());
         
      
     }, [])
@@ -23,6 +30,7 @@ const Home = () => {
   return (
     <div>
       <BannerCarousel listBanner={listBanner}/>
+      <ListMovie/>
     </div>
   )
 }

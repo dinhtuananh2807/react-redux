@@ -10,10 +10,6 @@ const initialState = {
  user: dataUserLocal,
 };
 
-
-
-
-
 const userSlice = createSlice ({
     name: 'user',
     initialState,

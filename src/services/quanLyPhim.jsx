@@ -9,5 +9,11 @@ export const quanlyPhimServ = {
         // tham số thứ 2 là data đươc truyền vào nếu API cần được gọi dữ liệu
         //Cụ thể là phương thức post
         return https.get('/api/QuanLyPhim/LayDanhSachBanner');
-    }
-}
+    },
+    getAllMovie: () => {
+
+        return https.get('/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP01');
+
+
+    },
+};
