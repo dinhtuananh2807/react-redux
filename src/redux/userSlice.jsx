@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const dataUserLocal = JSON.parse(localStorage.getItem('user'));
 
-console.log(dataUserLocal)
+console.log(dataUserLocal);
 
 const initialState = {
  user: dataUserLocal,
@@ -13,11 +13,15 @@ const initialState = {
 const userSlice = createSlice ({
     name: 'user',
     initialState,
-    reducers: {},
+    reducers: {
+        setDataUser : (state,action) => {
+                state.user = action.payload;
+        }
+    },
 })
 
 
-export const {} = userSlice.actions;
+export const {setDataUser} = userSlice.actions;
 
 export default userSlice.reducer;
 

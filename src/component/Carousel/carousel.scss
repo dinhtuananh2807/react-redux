@@ -1,13 +1,21 @@
 #banner {
     .slick-prev{
         left: 20px;
-        background-color: blue;
         z-index: 10;
+        color:white;
+        font-size:20px;
+        &::before{
+            content:"";
+        }
     }
 
     .slick-next {
         right: 20px;
-        background-color: blue;
         z-index: 10;
+        color:white;
+        font-size:20px;
+        &::before{
+            content:"";
+        }
     }
 }

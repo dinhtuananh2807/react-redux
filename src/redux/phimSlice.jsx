@@ -12,7 +12,7 @@ export const getAllMovieAPI = createAsyncThunk ("phim/getAllMovie", async () =>{
 
     const res = await quanlyPhimServ.getAllMovie();
     console.log(res);
-    console.log(res.data.content);
+
     return res.data.content;
 
 
